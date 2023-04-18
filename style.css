@@ -1,0 +1,116 @@
+/* Set global font and color styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #F0F8FF; /* light blue */
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* Style section headings */
+h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+/* Style sub-section headings */
+h3 {
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Style code blocks */
+pre {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 1em;
+    overflow-x: auto;
+}
+
+/* Style code syntax */
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    color: #c7254e;
+    background-color: #f7f7f7;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* Style links */
+a {
+    color: #c7254e;
+    text-decoration: none;
+    border-bottom: 1px solid #c7254e;
+}
+
+a:hover {
+    color: #333;
+    background-color: #c7254e;
+    border-color: #c7254e;
+}
+
+/* Style blockquotes */
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #c7254e;
+    padding: 0.5em;
+    margin: 1em 0;
+    background-color: #f7f7f7;
+}
+
+/* Style lists */
+ul, ol {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+/* Style table */
+table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #c7254e;
+    color: #fff;
+}
+
+/* Style code syntax highlighting */
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #f7f7f7;
+}
+
+.hljs-keyword {
+    color: #c7254e;
+}
+
+.hljs-string {
+    color: #718c00;
+}
+
+.hljs-comment {
+    color: #999;
+    font-style: italic;
+}
