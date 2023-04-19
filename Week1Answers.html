@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Week 1 Answers</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body style="margin: 20px; padding: 10px;">
+    <div style="text-align: center;"><h1>DAY 1</h1></div>
+    <h2>Question 1:</h2>
+    <p>Write a program that takes a user's input and checks if it is positive, negative, or zero</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            num = float(input("Enter a number: "))
+            if num > 0:
+                print("Positive")
+            elif num == 0:
+                print("Zero")
+            else:
+                print("Negative")
+        </code>
+
+</pre>
+
+    <h2>Question 2:</h2>
+    <p>Write a program that takes a user's input and checks if it is a vowel or a consonant</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            letter = input("Enter a letter: ")
+            if letter in ['a', 'e', 'i', 'o', 'u']:
+                print("Vowel")
+            else:
+                print("Consonant")
+        </code>
+
+</pre>
+
+    <h2>Question 3:</h2>
+    <p>Write a program that takes a user's input and checks if it is a weekday or weekend</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            import datetime
+            date_str = input("Enter a date in the format dd-mm-yyyy: ")
+            date_obj = datetime.datetime.strptime(date_str, '%d-%m-%Y').date()
+            
+            if date_obj.weekday() < 5:
+            print("Weekday")
+            else:
+            print("Weekend")
+        </code>
+
+</pre>
+
+    <h2>Question 4:</h2>
+    <p>Write a program that takes a user's input and checks if it is a single digit, double digit, or three-digit number
+    </p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            num = input("Enter a number: ")
+            if len(num) == 1:
+                print("Single digit")
+            elif len(num) == 2:
+                print("Double digit")
+            elif len(num) == 3:
+                print("Three-digit number")
+            else:
+                print("Number has more than three digits")
+        </code>
+
+</pre>
+
+    <h2>Question 5:</h2>
+    <p>Write a program that takes a user's input and checks if it is a multiple of 3, 5, or 7</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            num = int(input("Enter a number: "))
+            if num % 3 == 0 and num % 5 == 0 and num % 7 == 0:
+                print("Multiple of 3, 5, and 7")
+            elif num % 3 == 0 and num % 5 == 0:
+                print("Multiple of 3 and 5")
+            elif num % 3 == 0 and num % 7 == 0:
+                print("Multiple of 3 and 7")
+            elif num % 5 == 0 and num % 7 == 0:
+                print("Multiple of 5 and 7")
+            elif num % 3 == 0:
+                print("Multiple of 3")
+            elif num % 5 == 0:
+                print("Multiple of 5")
+            elif num % 7 == 0:
+                print("Multiple of 7")
+            else:
+                print("Not a multiple of 3, 5, or 7")
+        </code>
+
+</pre>
+
+<h2>Question 6:</h2>
+<p>Write a program that takes a user's input and checks if it is a perfect square, perfect cube, or neither.</p>
+<h3>Answer:</h3>
+<p>Here is the Python code to solve the problem:</p>
+<pre><code>
+            number = int(input("Enter a number: "))
+            square_root = number ** 0.5
+            cube_root = number ** (1/3)
+            if square_root == int(square_root):
+                print(number, "is a perfect square.")
+            elif cube_root == int(cube_root):
+                print(number, "is a perfect cube.")
+            else:
+                print(number, "is neither a perfect square nor a perfect cube.")
+</code></pre>
+
+<h2>Question 7:</h2>
+<p>Write a program that takes a user's input and checks if it is a multiple of both 4 and 6 or just one of them.</p>
+<h3>Answer:</h3>
+<p>Here is the Python code to solve the problem:</p>
+<pre><code>
+                number = int(input("Enter a number: "))
+                if number % 4 == 0 and number % 6 == 0:
+                    print(number, "is a multiple of both 4 and 6.")
+                elif number % 4 == 0 or number % 6 == 0:
+                    print(number, "is a multiple of either 4 or 6, but not both.")
+                else:
+                    print(number, "is not a multiple of either 4 or 6.")
+</code></pre>
+
+<h2>Question 8:</h2>
+<p>Write a program that takes a user's input and checks if it is a valid date (in format "dd-mm-yyyy").</p>
+<h3>Answer:</h3>
+<p>Here is the Python code to solve the problem:</p>
+<pre><code>
+    date_input = input("Enter a date in the format 'dd-mm-yyyy': ")
+    day, month, year = date_input.split("-")
+    Convert the day, month, and year to integers
+    day = int(day)
+    month = int(month)
+    year = int(year)
+
+    #Check if the date is valid
+    valid = True
+    if year < 1 or year > 9999:
+        valid = False
+    elif month < 1 or month > 12:
+        valid = False
+    else:
+        days_in_month = 31
+    if month == 4 or month == 6 or month == 9 or month == 11:
+        days_in_month = 30
+    elif month == 2:
+        if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+        days_in_month = 29
+    else:
+        days_in_month = 28
+    
+        if day < 1 or day > days_in_month:
+            valid = False
+
+    #Output the result
+    if valid:
+        print(date_input, "is a valid date.")
+    else:
+        print(date_input, "is not a valid date.")
+</code></pre>
+
+<h2>Question 9:</h2>
+<p>Write a program that takes a user's input and checks if it is a prime number, even number, or odd number</p>
+<h3>Answer:</h3>
+<pre><code>
+    num = int(input("Enter a number: "))
+
+    if num > 1:
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            print(num, "is an even number" if num%2==0 else num, "is an odd number")
+            break
+        else:
+        print(num, "is a prime number")
+        print(num, "is an even number" if num%2==0 else num, "is an odd number")
+
+    else:
+    print(num, "is not a prime number")
+    print(num, "is an even number" if num%2==0 else num, "is an odd number")
+
+</code></pre>
+
+<h2>Question 10:</h2>
+<p>Write a program that takes a user's input and checks if it is a valid time (in format "hh:mm:ss").</p>
+<h3>Answer:</h3>
+<pre><code>
+    import re
+
+    time = input("Enter a time (in format 'hh:mm:ss'): ")
+    
+    pattern = re.compile("^([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$")
+    
+    if pattern.match(time):
+        print("Valid time!")
+    else:
+        print("Invalid time.")
+</code></pre>
+
+</body>
+
+</html>
