@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="">
 </head>
 
-<body style="margin: 20px; padding: 10px;">
-    <div style="text-align: center;"><h1>DAY 1</h1></div>
+<body style="margin: 20px; padding: 20px;">
+    <div style="text-align: center;"><h1><u>Answers to the Programs to implement if-elseif-else scenarios</u></h1><br></div>
     <h2>Question 1:</h2>
     <p>Write a program that takes a user's input and checks if it is positive, negative, or zero</p>
     <h3>Answer:</h3>
@@ -213,6 +213,153 @@
         print("Valid time!")
     else:
         print("Invalid time.")
+</code></pre>
+<div style="text-align: center;"><h1><u>Answers to the Programs to implement loops</u></h1><br></div>
+
+
+<h2>Question 1:</h2>
+<p>Write a program that prints out the first 10 numbers of the Fibonacci sequence using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    a = 0
+    b = 1
+    for i in range(10):
+        print(a)
+        c = a + b
+        a = b
+        b = c
+    
+</code></pre>
+
+
+<h2>Question 2:</h2>
+<p>Write a program that takes a user's input and prints out all the numbers between 1 and the user's input that are divisible by 3 using a for loop</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    for i in range(1, n+1):
+        if i % 3 == 0:
+            print(i)
+    
+</code></pre>
+
+
+<h2>Question 3:</h2>
+<p>Write a program that takes a user's input and calculates the factorial of that number using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    fact = 1
+    while n > 0:
+        fact *= n
+        n -= 1
+    print("Factorial =", fact)
+    
+</code></pre>
+
+
+<h2>Question 4:</h2>
+<p>Write a program that generates a random number and asks the user to guess the number. The program should keep asking until the user guesses the correct number using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    import random
+
+    number = random.randint(1, 10)
+    guess = 0
+    
+    while guess != number:
+        guess = int(input("Guess a number between 1 and 10: "))
+        if guess < number:
+            print("Too low!")
+        elif guess > number:
+            print("Too high!")
+        else:
+            print("You guessed it!")
+    
+</code></pre>
+
+<h2>Question 5:</h2>
+<p>Write a program that takes a user's input and prints out the multiplication table of that number using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    for i in range(1, 11):
+        print(n, "x", i, "=", n*i)
+    
+</code></pre>
+
+<h2>Question 6:</h2>
+<p>Write a program that takes a user's input and prints out the sum of all the even numbers between 1 and the user's input using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    sum = 0
+    for i in range(2, n+1, 2):
+        sum += i
+    print("Sum of even numbers =", sum)
+    
+</code></pre>
+
+<h2>Question 7:</h2>
+<p>Write a program that takes a user's input and prints out the reverse of the input using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = input("Enter a number: ")
+    rev = ""
+    i = len(n) - 1
+    while i >= 0:
+        rev += n[i]
+        i -= 1
+    print("Reverse =", rev)
+    
+</code></pre>
+
+<h2>Question 8:</h2>
+<p>Write a program that prints out all the prime numbers between 1 and 100 using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    for i in range(2, 101):
+    is_prime = True
+    for j in range(2, i):
+        if i % j == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(i)
+
+</code></pre>
+
+<h2>Question 9:</h2>
+<p>Write a program that takes a user's input and prints out all the divisors of that number using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    for i in range(1, n+1):
+        if n % i == 0:
+            print(i)
+
+
+</code></pre>
+
+<h2>Question 10:</h2>
+<p>Write a program that takes a user's input and checks if it is a palindrome using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = input("Enter a word: ")
+    i = 0
+    j = len(n) - 1
+    is_palindrome = True
+    while i < j:
+        if n[i] != n[j]:
+            is_palindrome = False
+            break
+        i += 1
+        j -= 1
+    if is_palindrome:
+        print(n, "is a palindrome")
+    else:
+        print(n, "is not a palindrome")
+    
 </code></pre>
 
 </body>
