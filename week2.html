@@ -779,6 +779,210 @@
           </ol>
       </p>
 
+      <h2>2.4 Sets</h2>
+      <h3>2.4.1 What is a set in python?</h3>
+      <p>A Set in Python programming is an unordered collection data type that is iterable, mutable and has no duplicate elements.</p>
+      <h3>2.4.2 Some distinct properties of sets</h3>
+      <p>
+        <ol>
+          <li>Sets are written with curly brackets.</li>
+          <li>Set items can appear in a different order every time you use them, and cannot be referred to by index or key.</li>
+          <li>Once a set is created, you cannot change its items, but you can remove items and add new items.</li>
+          <li>Sets cannot have two items with the same value.</li>
+          <li>The values <code>True</code> and <code>1</code> are considered the same value in sets, and are treated as duplicates.</li>
+        </ol>
+      </p>
+      
+      <h3>2.4.2 Create a set in python</h3>
+      <p>To create a set in Python, you can use curly braces ({}) or the set() function. For example:</p>
+      <p>
+        <pre>
+          <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            my_set = {1, 2, 3, 4, 5}
+            another_set = set(['apple', 'banana', 'orange'])            
+          </code>
+        </pre>
+      </p>
+
+      <h3>2.4.2 Add element to a set in python</h3>
+      <p>To add one item to a set use the <code>add()</code> method. For example:</p>
+      <p>
+        <pre>
+          <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisset = {"apple", "banana", "cherry"}
+            thisset.add("orange")
+            print(thisset)           
+          </code>
+        </pre>
+      </p>
+
+      <h3>2.4.3 Add 2 Sets in python</h3>
+      <p>To add items from another set into the current set, use the <code>update()</code> method. For example:</p>
+      <p>
+        <pre>
+          <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisset = {"apple", "banana", "cherry"}
+            thisset.add("orange")
+            print(thisset)           
+          </code>
+        </pre>
+        <b>**NOTE:</b> The object in the <code>update()</code> method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+      </p>
+
+      <h3>2.4.4 Access Set items in python</h3>
+      <p>
+        You cannot access items in a set by referring to an <code>index</code> or a <code>key</code>.
+          <br>
+        But you can loop through the set items using a <code>for</code> loop, or ask if a specified value is present in a set, by using the <code>in</code> keyword. 
+        <br>
+        Loop through the set, and print the values, For example:
+      </p>
+      <p>
+        <pre>
+          <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisset = {"apple", "banana", "cherry"}
+
+            for x in thisset:
+              print(x) 
+              
+            #Check if "banana" is present in the set:
+
+            print("banana" in thisset) #Output: True
+          </code>
+        </pre>
+      </p>
+
+      <h3>2.4.5 Loop through a set in python</h3>
+      <p>You can loop through the set items by using a <code>for</code>> loop: For example:</p>
+      <p>
+        <pre>
+          <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisset = {"apple", "banana", "cherry"}
+
+            for x in thisset:
+              print(x)         
+          </code>
+        </pre>
+      </p>
+
+      <h3>2.4.6 Remove item from a set in python</h3>
+      <p>To remove an item in a set, use the <code>remove()</code>, or the <code>discard()</code> method. For example:</p>
+      <p>
+        <pre>
+          <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+              thisset = {"apple", "banana", "cherry"}
+
+              thisset.remove("banana")
+              print(thisset)  
+              
+              thisset.discard("banana")
+              print(thisset)            # Note: If the item to remove does not exist, discard() will NOT raise an error.
+          </code>
+        </pre>
+      </p>
+
+      <h3>2.4.7 Set Methods</h3>
+      <p>
+        <div style="height: 200px; overflow-x: auto; overflow-y: auto;;">
+          <style>
+              div::-webkit-scrollbar {
+                width: 10px;
+              }
+              
+              div::-webkit-scrollbar-track {
+                background-color: #f1f1f1;
+              }
+              
+              div::-webkit-scrollbar-thumb {
+                background-color: #ccc;
+                border-radius: 5px;
+              }
+            </style>
+
+              <table class="table table-bordered" >
+                <thead>
+                        <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>add()</code></td>
+                    <td>Adds an element to the set</td>
+                  </tr>
+                  <tr>
+                    <td><code>clear()</code></td>
+                    <td>Removes all the elements from the set</td>
+                  </tr>
+                  <tr>
+                    <td><code>copy()</code></td>
+                    <td>Returns a copy of the set</td>
+                  </tr>
+                  <tr>
+                    <td><code>difference()</code></td>
+                    <td>Returns a set containing the difference between two or more sets</td>
+                  </tr>
+                  <tr>
+                    <td><code>difference_update()</code></td>
+                    <td>Removes the items in this set that are also included in another, specified set</td>
+                  </tr>
+                  <tr>
+                    <td><code></code>discard()</td>
+                    <td>Remove the specified item</td>
+                  </tr>
+                  <tr>
+                    <td><code>intersection()</code></td>
+                    <td>Returns a set, that is the intersection of two other sets</td>
+                  </tr>
+                  <tr>
+                    <td><code>intersection_update()</code></td>
+                    <td>Removes the items in this set that are not present in other, specified set(s)</td>
+                  </tr>
+                  <tr>
+                    <td><code>isdisjoint()</code></td>
+                    <td>Returns whether two sets have a intersection or not</td>
+                  </tr>
+                  <tr>
+                    <td><code>issubset()</code></td>
+                    <td>Returns whether another set contains this set or not</td>
+                  </tr>
+                  <tr>
+                    <td><code>issuperset()</code></td>
+                    <td>Returns whether this set contains another set or not</td>
+                  </tr>
+                  <tr>
+                    <td><code>pop()</code></td>
+                    <td>Removes an element from the set</td>
+                  </tr>
+                  <tr>
+                    <td><code>remove()</code></td>
+                    <td>Removes the specified element</td>
+                  </tr>
+                  <tr>
+                    <td><code>symmetric_difference()</code></td>
+                    <td>Returns a set with the symmetric differences of two sets</td>
+                  </tr>
+                  <tr>
+                    <td><code>symmetric_difference_update()</code></td>
+                    <td>Inserts the symmetric differences from this set and another</td>
+                  </tr>
+                  <tr>
+                    <td><code>union()</code></td>
+                    <td>Return a set containing the union of sets</td>
+                  </tr>
+                  <tr>
+                    <td><code>update()</code></td>
+                    <td>Update the set with the union of this set and others</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+        </div>
+      </p>
+
+
 
       <h3>2.5 Homework Questions</h3>
       <h5>2.5.1 Set 1: 20 questions</h5>
