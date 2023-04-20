@@ -114,3 +114,14 @@ th {
     color: #999;
     font-style: italic;
 }
+
+.back-to-home {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
