@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Week 2 Answers</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body style="margin: 20px; padding: 20px;">
+    <div style="text-align: center;"><h1><u>Answers of Set 1</u></h1><br></div>
+    <h2>Question 1:</h2>
+    <p>Find the largest number in a list</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            def find_largest_num(lst):
+            max_num = lst[0]
+            for num in lst:
+                if num > max_num:
+                max_num = num
+            return max_num
+
+            my_list = [1, 2, 3, 4, 5]
+            find_largest_num(my_list)
+        </code>
+
+</pre>
+
+    <h2>Question 2:</h2>
+    <p>Find the second largest number in a list</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            def find_second_largest_num(lst):
+            sorted_lst = sorted(set(lst))
+            if len(sorted_lst) < 2:
+                return None
+            else:
+                return sorted_lst[-2]
+
+            my_list = [1, 2, 3, 4, 5]
+            find_second_largest_num(my_list)
+        </code>
+
+</pre>
+
+    <h2>Question 3:</h2>
+    <p>WRemove duplicates from a list</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            def remove_duplicates(lst):
+                return list(set(lst))
+
+            my_list = [1, 2, 3, 3, 4, 4, 5]
+            remove_duplicates(my_list)
+
+        </code>
+
+</pre>
+
+    <h2>Question 4:</h2>
+    <p>Sort a list in ascending order
+    </p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            def sort_ascending(lst):
+                return sorted(lst)
+
+            my_list = [5,4,3,2,1,0]
+            sort_ascending(my_list)
+        </code>
+
+</pre>
+
+    <h2>Question 5:</h2>
+    <p>Sort a list in descending order</p>
+    <h3>Answer:</h3>
+    <pre>
+        <code>
+            def sort_descending(lst):
+                return sorted(lst, reverse=True)
+
+            my_list = [1, 2, 3, 4, 5]
+            sort_descending(my_list)
+        </code>
+
+</pre>
+
+<h2>Question 6:</h2>
+<p>Find the common elements between two lists</p>
+<h3>Answer:</h3>
+<p>Here is the Python code to solve the problem:</p>
+<pre><code>
+    def find_common_elements(lst1, lst2):
+        return list(set(lst1) & set(lst2))
+
+        my_list1 = [1, 2, 3, 4, 5]
+        my_list2 = [9, 8, 7, 4, 5]
+
+        find_common_elements(my_list1, my_list2)
+
+</code></pre>
+
+<h2>Question 7:</h2>
+<p>Find the difference between two lists</p>
+<h3>Answer:</h3>
+<p>Here is the Python code to solve the problem:</p>
+<pre><code>
+    def find_difference(lst1, lst2):
+        return list(set(lst1) - set(lst2))
+    
+    my_list1 = [1, 2, 3, 4, 5]
+    my_list2 = [9, 8, 7, 4, 5]
+
+    find_difference(my_list1, my_list2)
+
+</code></pre>
+
+<h2>Question 8:</h2>
+<p>Concatenate two lists</p>
+<h3>Answer:</h3>
+<p>Here is the Python code to solve the problem:</p>
+<pre><code>
+    def concatenate_lists(lst1, lst2):
+        return lst1 + lst2
+    
+    my_list1 = [1, 2, 3, 4, 5]
+    my_list2 = [9, 8, 7, 4, 5]
+    
+    concatenate_lists(my_list1, my_list2)
+
+</code></pre>
+
+<h2>Question 9:</h2>
+<p>Split a list into evenly sized chunks</p>
+<h3>Answer:</h3>
+<pre><code>
+    def split_list(lst, size):
+        return [lst[i:i+size] for i in range(0, len(lst), size)]
+
+    my_list = [1, 2, 3, 4, 5]
+    split_list(my_list)
+</code></pre>
+
+<h2>Question 10:</h2>
+<p>Reverse a list</p>
+<h3>Answer:</h3>
+<pre><code>
+    def reverse_list(lst):
+        return lst[::-1]
+
+    my_list = [1, 2, 3, 4, 5]
+    reverse_list(my_list)
+
+</code></pre>
+
+<h2>Question 11:</h2>
+<p>Check if a given element is present in a list</p>
+<h3>Answer:</h3>
+<pre><code>
+    def is_element_present(list, elem):
+        return elem in lst
+
+    my_list = [1,2,3,4,5]
+    is_element_present(my_list, 3)
+    
+</code></pre>
+
+
+<h2>Question 12:</h2>
+<p>Count the number of occurrences of an element in a list</p>
+<h3>Answer:</h3>
+<pre><code>
+    def count_occurrences(lst, elem):
+        return lst.count(elem)
+
+    my_list= [1,2,3,4,4,5,5,1]
+    count_occurrences(my_list, 4)
+    
+</code></pre>
+
+
+<h2>Question 13:</h2>
+<p>Create a tuple</p>
+<h3>Answer:</h3>
+<pre><code>
+    tup = (1, 2, 3)
+
+    print(tup)
+    
+</code></pre>
+
+
+<h2>Question 14:</h2>
+<p>Access a tuple.</p>
+<h3>Answer:</h3>
+<pre><code>
+    tup = (1, 2, 3)
+    print(tup[0])      
+</code></pre>
+
+<h2>Question 15:</h2>
+<p>Unpack a tuple</p>
+<h3>Answer:</h3>
+<pre><code>
+    tup = (1, 2, 3)
+    a, b, c = tup
+
+    print(a)  # Output: 1
+    print(b)  # Output: 2
+    print(c)  # Output: 3   
+</code></pre>
+
+<h2>Question 16:</h2>
+<p>Concatenate two tuples</p>
+<h3>Answer:</h3>
+<pre><code>
+    tup1 = (1, 2, 3)
+    tup2 = (4, 5, 6)
+    concatenated_tup = tup1 + tup2
+</code></pre>
+
+<h2>Question 17:</h2>
+<p>Convert a tuple to a list</p>
+<h3>Answer:</h3>
+<pre><code>
+    tup = (1, 2, 3)
+    lst = list(tup)
+    
+    print(lst)
+</code></pre>
+
+<h2>Question 18:</h2>
+<p>Find the intersection of two sets</p>
+<h3>Answer:</h3>
+<pre><code>
+    set1 = {1, 2, 3}
+    set2 = {2, 3, 4}
+    intersection = set1.intersection(set2)
+
+    print(intersection)
+</code></pre>
+
+<h2>Question 19:</h2>
+<p>Find the union of two sets</p>
+<h3>Answer:</h3>
+<pre><code>
+    set1 = {1, 2, 3}
+    set2 = {2, 3, 4}
+    union = set1.union(set2)
+
+    print(union)
+</code></pre>
+
+<h2>Question 20:</h2>
+<p>Create a dictionary and add or remove items from it</p>
+<h3>Answer:</h3>
+<pre><code>
+    # Create an empty dictionary
+    my_dict = {}
+
+    # Add items to the dictionary
+    my_dict["apple"] = 1
+
+    print(my_dict)
+
+</code></pre>
+
+
+<div style="text-align: center;"><h1><u>Answers of Set 2</u></h1><br></div>
+
+
+<h2>Question 1:</h2>
+<p>Write a program that prints out the first 10 numbers of the Fibonacci sequence using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    a = 0
+    b = 1
+    for i in range(10):
+        print(a)
+        c = a + b
+        a = b
+        b = c
+    
+</code></pre>
+
+
+<h2>Question 2:</h2>
+<p>Write a program that takes a user's input and prints out all the numbers between 1 and the user's input that are divisible by 3 using a for loop</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    for i in range(1, n+1):
+        if i % 3 == 0:
+            print(i)
+    
+</code></pre>
+
+
+<h2>Question 3:</h2>
+<p>Write a program that takes a user's input and calculates the factorial of that number using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    fact = 1
+    while n > 0:
+        fact *= n
+        n -= 1
+    print("Factorial =", fact)
+    
+</code></pre>
+
+
+<h2>Question 4:</h2>
+<p>Write a program that generates a random number and asks the user to guess the number. The program should keep asking until the user guesses the correct number using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    import random
+
+    number = random.randint(1, 10)
+    guess = 0
+    
+    while guess != number:
+        guess = int(input("Guess a number between 1 and 10: "))
+        if guess < number:
+            print("Too low!")
+        elif guess > number:
+            print("Too high!")
+        else:
+            print("You guessed it!")
+    
+</code></pre>
+
+<h2>Question 5:</h2>
+<p>Write a program that takes a user's input and prints out the multiplication table of that number using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    for i in range(1, 11):
+        print(n, "x", i, "=", n*i)
+    
+</code></pre>
+
+<h2>Question 6:</h2>
+<p>Write a program that takes a user's input and prints out the sum of all the even numbers between 1 and the user's input using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    sum = 0
+    for i in range(2, n+1, 2):
+        sum += i
+    print("Sum of even numbers =", sum)
+    
+</code></pre>
+
+<h2>Question 7:</h2>
+<p>Write a program that takes a user's input and prints out the reverse of the input using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = input("Enter a number: ")
+    rev = ""
+    i = len(n) - 1
+    while i >= 0:
+        rev += n[i]
+        i -= 1
+    print("Reverse =", rev)
+    
+</code></pre>
+
+<h2>Question 8:</h2>
+<p>Write a program that prints out all the prime numbers between 1 and 100 using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    for i in range(2, 101):
+    is_prime = True
+    for j in range(2, i):
+        if i % j == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(i)
+
+</code></pre>
+
+<h2>Question 9:</h2>
+<p>Write a program that takes a user's input and prints out all the divisors of that number using a for loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = int(input("Enter a number: "))
+    for i in range(1, n+1):
+        if n % i == 0:
+            print(i)
+
+
+</code></pre>
+
+<h2>Question 10:</h2>
+<p>Write a program that takes a user's input and checks if it is a palindrome using a while loop.</p>
+<h3>Answer:</h3>
+<pre><code>
+    n = input("Enter a word: ")
+    i = 0
+    j = len(n) - 1
+    is_palindrome = True
+    while i < j:
+        if n[i] != n[j]:
+            is_palindrome = False
+            break
+        i += 1
+        j -= 1
+    if is_palindrome:
+        print(n, "is a palindrome")
+    else:
+        print(n, "is not a palindrome")
+    
+</code></pre>
+
+</body>
+
+</html>
