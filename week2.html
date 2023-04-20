@@ -320,59 +320,465 @@
   </tbody>
 </table>
                     </div>
-
-
                 </p>
-                    <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
-                       
-                    </code></pre>
 
-
-
-
-
-
-
-
-
-
-
-
-        <h2>2.2Tuples</h2>
-<p>2.1.1Tuples are another type of data structure in Python that are similar to lists, but with one key difference: tuples are immutable, whereas lists are mutable. This means that once you create a tuple, you cannot change its values.</p>
-<p>To create a tuple, you use parentheses () and separate each item with a comma. For example:</p>
-<pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
-    my_tuple = (1, 2, 3, 4, 5)
-    names = ("Alice", "Bob", "Charlie", "Dave")
-    mixed_tuple = (1, "hello", True, 3.14)
-</code></pre>
-<p>2.1.2 You can access individual items in a tuple by their index, which works the same way as it does for lists. The first item in a tuple has an index of 0, the second item has an index of 1, and so on. To access an item, you use square brackets [] and the index of the item you want. For example:</p>
-<pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
-    my_tuple = (1, 2, 3, 4, 5)
-    print(my_tuple[0])  # prints 1
-    print(my_tuple[2])  # prints 3
-</code></pre>
-<p>2.1.3 You can also use slicing to access a range of items in a tuple, just like you can with lists. Slicing is done by specifying the start and end indices separated by a colon. For example:</p>
-<pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
-    my_tuple = (1, 2, 3, 4, 5)
-    print(my_tuple[1:3])  # prints (2, 3)
-    print(my_tuple[:3])   # prints (1, 2, 3)
-    print(my_tuple[3:])   # prints (4, 5)
-</code></pre>
-<p>However, as mentioned earlier, tuples are immutable, so you cannot modify their values directly. If you try to assign a new value to an item in a tuple, you will get a TypeError. For example:</p>
-<pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
-    my_tuple = (1, 2, 3, 4, 5)
-    my_tuple[2] = 10  # raises TypeError: 'tuple' object does not support item assignment
-</code></pre>
-<p>If you need to modify a tuple, you will need to create a new tuple with the desired values. For example:</p>
-<pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
-    my_tuple = (1, 2, 3, 4, 5)
-    new_tuple = my_tuple[:2] + (10, 20) + my_tuple[3:]
-    print(new_tuple)  # prints (1, 2, 10, 20, 5)
-</code></pre>
-<p>While tuples may seem less versatile than lists, they have their own advantages. For example, tuples can be used as keys in dictionaries, whereas lists cannot. Additionally, because tuples are immutable, they are often more efficient to use than lists in certain situations.</p>
-
+                <h3>2.1.10 Why is List used in python</h3>
+                <p>
+                    <div>
+                        <ol>
+                            <li><b>Flexibility: </b>Lists can hold any combination of data types and can be easily modified (added to, removed from, or reordered). This makes lists a highly flexible and customizable data structure that can be used in a wide range of applications.</li>
+                            <li><b>Efficiency: </b>Lists are highly efficient for storing and accessing ordered data, and many built-in functions and methods make it easy to work with lists in Python.</li>
+                            <li><b>Versatility: </b>Lists can be used in a wide range of applications, from simple data storage and retrieval to more complex operations such as sorting, filtering, and mapping data.</li>
+                            <li><b>Compatibility: </b>Python's built-in support for lists and their associated functions and methods make them highly compatible with other Python libraries and frameworks.</li>
+                            </ol>
+                    </div>
+                </p>
+              
+        <h2>2.2 Tuple</h2>    
+        <h3>2.2.1 What is a Tuple in python?</h3>
+        <p>Tuples are another type of data structure in Python that are similar to lists, but with one key difference: tuples are immutable, whereas lists are mutable. This means that once you create a tuple, you cannot change its values.</p>
         
+        <h3>2.2.2 Create a Tuple in python</h3>
+        <p>To create a tuple, you use parentheses () and separate each item with a comma. For example:</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            my_tuple = (1, 2, 3, 4, 5)
+            names = ("Alice", "Bob", "Charlie", "Dave")
+            mixed_tuple = (1, "hello", True, 3.14)
+        </code></pre>
+
+        <h3>2.2.3 Accessing elements in a Tuple</h3>
+        <p>You can access individual items in a tuple by their index, which works the same way as it does for lists. The first item in a tuple has an index of 0, the second item has an index of 1, and so on. To access an item, you use square brackets [] and the index of the item you want. For example:</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            my_tuple = (1, 2, 3, 4, 5)
+            print(my_tuple[0])  # prints 1
+            print(my_tuple[2])  # prints 3
+        </code></pre>
+
+        <P><h4>2.2.3.1 Print the second item in the tuple:</h4></P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thistuple = ("apple", "banana", "cherry")
+            print(thistuple[1]) #Output: apple
+        </code></pre>
+
+        <P><h4>2.2.3.2 Negetive Indexing in tuple:</h4></P>
+        <p><code>-1</code> refers to the last item, <code>-2</code> refers to the second last item etc.</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thistuple = ("apple", "banana", "cherry")
+            print(thistuple[-1]) #Output: cherry
+        </code></pre>
+
+        <P><h4>2.2.3.2 Range of Index in tuple:</h4></P>
+        <p>You can specify a range of indexes by specifying where to start and where to end the range.
+            <br>
+            When specifying a range, the return value will be a new tuple with the specified items.</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+            print(thistuple[2:5])   #Output: ('cherry', 'orange', 'kiwi')
+        </code></pre>
+
+        <h3>2.2.4 Adding elements in a tuple</h3>
+        <p>You are allowed to add tuples to tuples, so if you want to add one item, (or many), create a new tuple with the item(s), and add it to the existing tuple</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thistuple = ("apple", "banana", "cherry")
+            y = ("orange",)
+            thistuple += y
+
+            print(thistuple)
+
+            #Output
+            ('apple', 'banana', 'cherry', 'orange')
+        </code></pre>
+
+        <p><b>Note: </b><u>When creating a tuple with only one item, remember to include a comma after the item, otherwise it will not be identified as a tuple.</u></p>
+
+        <h3>2.1.4  Slicing tuple</h3>
+        <p>You can also use slicing to access a range of items in a tuple, just like you can with lists. Slicing is done by specifying the start and end indices separated by a colon. For example:</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            my_tuple = (1, 2, 3, 4, 5)
+            print(my_tuple[1:3])  # prints (2, 3)
+            print(my_tuple[:3])   # prints (1, 2, 3)
+            print(my_tuple[3:])   # prints (4, 5)
+        </code></pre>
+
+        <p>However, as mentioned earlier, tuples are immutable, so you cannot modify their values directly. If you try to assign a new value to an item in a tuple, you will get a TypeError. For example:</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            my_tuple = (1, 2, 3, 4, 5)
+            my_tuple[2] = 10  # raises TypeError: 'tuple' object does not support item assignment
+        </code></pre>
+
+        <p>If you need to modify a tuple, you will need to create a new tuple with the desired values. For example:</p>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            my_tuple = (1, 2, 3, 4, 5)
+            new_tuple = my_tuple[:2] + (10, 20) + my_tuple[3:]
+            print(new_tuple)  # prints (1, 2, 10, 20, 5)
+        </code></pre>
+
+    <h3>2.2.5 Tuple Methods</h3>
+    <p>
+        <p>
+            <div style="height: 150px; overflow: auto;">
+                <style>
+                    div::-webkit-scrollbar {
+                      width: 10px;
+                    }
+                    
+                    div::-webkit-scrollbar-track {
+                      background-color: #f1f1f1;
+                    }
+                    
+                    div::-webkit-scrollbar-thumb {
+                      background-color: #ccc;
+                      border-radius: 5px;
+                    }
+                  </style>
+                <table class="table table-bordered" >
+                <thead>
+                        <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                        <th>Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><code>count()</code></td>
+                    <td>returns the number of times a specified item appears in the tuple.</td>
+                    <td>
+                    <code>
+                    pmy_tuple = (1, 2, 3, 4, 4, 4, 5)
+                    count = my_tuple.count(4)
+                    print(count)   # Output: 3
+                    </code>
+                </td>
+                </tr>
+                 <tr>
+                <td><code>index()</code></td>
+                <td>returns the index of the first occurrence of a specified item in the tuple.</code></td>
+                <td>
+                <code>
+                    my_tuple = ('apple', 'banana', 'cherry', 'banana', 'kiwi')
+                    index = my_tuple.index('banana')
+                    print(index)   # Output: 1
+                </code>
+</td>
+                 </tr></tbody></table></div>
+                </p>
+    <h3>2.2.6 Why is tuple used in python</h3>
+      <p>While tuples may seem less versatile than lists, they have their own advantages. For example, tuples can be used as keys in dictionaries, whereas lists cannot. Additionally, because tuples are immutable, they are often more efficient to use than lists in certain situations.</p>
+        <p>
+            <ol>
+                <li>Tuples are <b>immutable</b>, meaning their values cannot be modified once they are created. This makes them useful for representing fixed values, such as coordinates or settings, that should not be changed during program execution.</li>
+                <li>Tuples can be used as <b>keys in dictionaries</b>, while lists cannot. This is because tuples are hashable, meaning their contents can be converted into a unique integer value that can be used as an identifier.</li>
+                <li>Tuples can be used to <b>eturn multiple values from a function</b>r, which can be unpacked and assigned to separate variables. This makes it easy to write concise and readable code that returns complex data.</li>
+              </ol>
+        </p>
+
+
+
+        <h2>2.3 Dictionaries</h2>
+        <h3>2.3.1 What is a Dictionary in python?</h3>
+        <p>
+            Dictionaries are used to store data values in key:value pairs.
+            A dictionary is a collection which is ordered, changeable and do not allow duplicates.<br>
+        </p>
+
+        <h3>2.3.2 What make dictionaries different from List and Tuple?</h3>
+        <p>
+            <ol>
+                <li><b>Dictionary Items:</b>Dictionary items are ordered, changeable, and does not allow duplicates.<br>Dictionary items are presented in key:value pairs, and can be referred to by using the key name.</li>
+                <li><b>Changeable:</b>Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.</li>
+                <li><b>Duplicates Not Allowed:</b>Dictionaries cannot have two items with the same key.</li>
+                </ol>
+
+                <b>Note:</b><u><i>As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.</i></u>
+        </p>
+
+        <h3>2.3.3 Create a Dictionary in python</h3>
+        <P>Adding an item to the dictionary is done by using a new index key and assigning a value to it:</P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              thisdict["color"] = "red"
+              print(thisdict)
+
+              #Output: {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+        </code></pre>
+
+        <h3>2.3.4 Accessing elements in a dictionary</h3>
+        <h4>2.3.4.1 Access key/value </h4>
+        <P>You can access the items of a dictionary by referring to its key name, inside square brackets:
+            <br>
+            Get the value of the <code>"model"</code> key:
+            <br>
+            There is also a method called <code>get()</code> that will give you the same result:
+        </P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              x = thisdict["model"]
+
+              #Output: Mustang
+
+              x = thisdict.get("model")
+
+              #Output: Mustang
+        </code></pre>
+
+        <h4>2.3.4.2 Get only Keys</h4>
+        <P>
+            You can access all the keys of a dictionary by using <code>keys()</code>:
+        </P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+            x = thisdict.keys()
+
+            #Output: dict_keys(['brand', 'model', 'year'])
+        </code></pre>
+
+        <h4>2.3.4.2 Get only Values</h4>
+        <P>
+            You can access all the keys of a dictionary by using <code>values()</code>:
+        </P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              x = thisdict.values()
+
+            #Output: dict_keys(['Ford', 'Mustang', '1964'])
+        </code></pre>
+
+        <h3>2.3.5 Modifying a  Dictionary in python</h3>
+        <h4>2.3.5.1 Change Values</h4>
+        <P>You can change the value of a specific item by referring to its key name:</P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              thisdict["year"] = 2018
+        </code></pre>
+
+        h4>2.3.5.2 Update Dictionary/h4>
+        <P>The <code>update()</code> method will update the dictionary with the items from the given argument.
+            <br>
+            The argument must be a dictionary, or an iterable object with key:value pairs.</P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              thisdict.update({"year": 2020})
+        </code></pre>
+
+        <h3>2.3.6 Removing items from a Dictionary</h3>
+        <P>
+            <ol>
+                <li>The <code>pop()</code> method removes the item with the specified key name:</li>
+                <li>The <code>del</code> keyword can also delete the dictionary completely:</li>
+                <li>The <code>clear()</code> method empties the dictionary:</li>
+            </ol>
+        </P>
+        <pre><code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+            1) using pop():
+              thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              thisdict.pop("model")
+              print(thisdict)
+
+              #Output: {'brand': 'Ford', 'year': 1964}
+
+            2) using del:
+              thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              del thisdict
+              print(thisdict) #this will cause an error because "thisdict" no longer exists.
+
+            3) using clear():
+              thisdict = {
+                "brand": "Ford",
+                "model": "Mustang",
+                "year": 1964
+              }
+              thisdict.clear()
+              print(thisdict)
+        </code></pre>
+
+        <h3>2.3.7 Loop through the dictionary</h3>
+        <h4></h4>2.3.7.1 Loop through both keys and values, by using the <code>items()</code> method:</h4>
+        <p>
+            <pre>
+                <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+                    for x, y in thisdict.items():   #x,y are the key and value pairs
+                        print(x, y)
+                </code>
+            </pre>
+        </p>
+
+        <h4></h4>2.3.7.2 You can use the <code>keys()</code> method to return the keys of a dictionary:</h4>
+        <p>
+            <pre>
+                <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+                    for x in thisdict.keys():
+                        print(x)
+                </code>
+            </pre>
+        </p>
+
+        <h4></h4>2.3.7.2 You can use the <code>values()</code> method to return the values of a dictionary:</h4>
+        <p>
+            <pre>
+                <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+                    for x in thisdict.values():
+                        print(x)
+                </code>
+            </pre>
+        </p>
+
+        <h3>2.3.8 Nested Dictionaries</h3>
+        <p>
+          Nesting dictionaries in Python can be useful for storing and organizing complex data structures. By nesting dictionaries, we can create a hierarchy of related data that can be easily accessed and modified. For example, we can create a dictionary that represents a person, and then nest dictionaries within that dictionary to represent the person's contact information, address, and other details. This allows us to access and modify specific pieces of data within the nested dictionaries using their respective keys. 
+
+          Nesting dictionaries can also be useful for representing data in a hierarchical or tree-like structure, such as a file system or a company's organizational chart. By representing this data in nested dictionaries, we can easily traverse the hierarchy and access or modify specific pieces of data at different levels of the hierarchy. 
+          
+          Overall, nesting dictionaries allows for more organized and efficient storage and manipulation of complex data structures in Python.
+          <br>
+          <br>
+          For example, Create three dictionaries, then create one dictionary that will contain the other three dictionaries:
+        </p>
+        <p>
+          <pre>
+              <code class="language-python" style="font-family: Consolas, monospace; font-size: 16px; color: #df1215; ">
+                child1 = {
+                  "name" : "Emil",
+                  "year" : 2004
+                }
+                child2 = {
+                  "name" : "Tobias",
+                  "year" : 2007
+                }
+                child3 = {
+                  "name" : "Linus",
+                  "year" : 2011
+                }
+                
+                myfamily = {
+                  "child1" : child1,
+                  "child2" : child2,
+                  "child3" : child3
+                }
+
+                #Output:  
+                {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+              </code>
+          </pre>
+      </p>
+
+      <h3>2.3.9 Dictionary Methods</h3>
+      <p>
+        <div style="height: 300px; overflow: auto;">
+          <style>
+              div::-webkit-scrollbar {
+                width: 10px;
+              }
+              
+              div::-webkit-scrollbar-track {
+                background-color: #f1f1f1;
+              }
+              
+              div::-webkit-scrollbar-thumb {
+                background-color: #ccc;
+                border-radius: 5px;
+              }
+            </style>
+          <table class="table table-bordered" >
+          <thead>
+                  <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>clear()</code></td>
+              <td>Removes all the elements from the dictionary</td>
+            </tr>
+            <tr>
+              <td><code>copy()</code></td>
+              <td>Returns a copy of the dictionary</td>
+            </tr>
+            <tr>
+              <td><code>fromkeys()</code></td>
+              <td>Returns a dictionary with the specified keys and value</td>
+            </tr>
+            <tr>
+              <td><code>get()</code></td>
+              <td>Returns the value of the specified key</td>
+            </tr>
+            <tr>
+              <td><code>items()</code></td>
+              <td>Returns a list containing a tuple for each key value pair</td>
+            </tr>
+            <tr>
+              <td><code>keys()</code></td>
+              <td>Returns a list containing the dictionary's keys</td>
+            </tr>
+            <tr>
+              <td><code>pop()</code></td>
+              <td>Removes the element with the specified key</td>
+            </tr>
+            <tr>
+              <td><code>popitem()</code></td>
+              <td>Removes the last inserted key-value pair</td>
+            </tr>
+            <tr>
+              <td><code>setdefault()</code></td>
+              <td>Returns the value of the specified key. If the key does not exist: insert the key, with the specified value</td>
+            </tr>
+            <tr>
+              <td><code>update()</code></td>
+              <td>Updates the dictionary with the specified key-value pairs</td>
+            </tr>
+            <tr>
+              <td><code>values()</code></td>
+              <td>Returns a list of all the values in the dictionary</td>
+            </tr>
+          </tbody></table>
+          </div>
+      </p>
+
+      <h3>2.3.10 Advantages of Dictionaries</h3>
+      <p>
+        <ol>
+          <li><strong>Fast access and retrieval of values:</strong> Dictionaries use a hash table to store their key-value pairs, which allows for fast access and retrieval of values based on their keys.</li>
+          <li><strong>Easy data organization:</strong> Dictionaries allow you to organize data using a key-value pair system, which is intuitive and easy to understand. This makes it easier to manage and manipulate data.</li>
+          <li><strong>Flexible and versatile:</strong> Dictionaries can store any type of data, including integers, floats, strings, lists, and even other dictionaries. This flexibility makes them a powerful tool for data processing and manipulation.</li>
+          <li><strong>Efficient memory usage:</strong> Dictionaries use less memory than other data structures, such as lists, making them more efficient for storing and manipulating large amounts of data.</li>
+          <li><strong>Easy to modify:</strong> Dictionaries are mutable, which means you can easily add, remove, or modify items within the dictionary. This makes it easy to update and manage data as needed.</li>
+          </ol>
+      </p>
+
 </body>
 
 </html>
+
