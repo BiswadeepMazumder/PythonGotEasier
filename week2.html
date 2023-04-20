@@ -127,7 +127,7 @@
                         <table class="table table-bordered" >
   <thead>
     <tr>
-      <th>Function/Method</th>
+      <th>Method</th>
       <th>Description</th>
       <th>Code</th>
     </tr>
@@ -181,19 +181,32 @@
     </tr>
     <tr>
       <td><code>reversed()</code></td>
-      <td>Returns a reversed iterator object for the original list.</td>
+      <td>Returns a reversed iterator object for the original list. Consider <code>my_list = [1, 2, 3, 4, 5]</td>
       <td>
         <code>
-
+            for item in reversed(my_list):
+                print(item)
+            # Output:
+            # 5
+            # 4
+            # 3
+            # 2
+            # 1
         </code>
       </td>
     </tr>
     <tr>
       <td><code>enumerate()</code></td>
-      <td>Returns an enumerate object containing pairs of index and value for each item in the list.</td>
+      <td>Returns an enumerate object containing pairs of index and value for each item in the list. Consider <code>my_list = ['apple', 'banana', 'orange']</td>
       <td>
         <code>
-
+            my_list = ['apple', 'banana', 'orange']
+            for index, value in enumerate(my_list):
+                print(index, value)
+            # Output:
+            # 0 apple
+            # 1 banana
+            # 2 orange    
         </code>
       </td>
     </tr>
@@ -202,6 +215,16 @@
       <td>Returns an iterator that combines the elements of two or more lists into tuples.</td>
       <td>
         <code>
+            list1 = [1, 2, 3]
+            list2 = ['one', 'two', 'three']
+            zipped = zip(list1, list2)
+            for item in zipped:
+                print(item)
+
+            # Output:
+            # (1, 'one')
+            # (2, 'two')
+            # (3, 'three')
 
         </code>
       </td>
@@ -211,7 +234,9 @@
       <td>Adds an item to the end of a list.</td>
       <td>
         <code>
-
+            my_list = [1, 2, 3]
+            my_list.append(4)
+            print(my_list) # Output: [1, 2, 3, 4]   
         </code>
       </td>
     </tr>
@@ -220,7 +245,9 @@
       <td>Inserts an item at a specified index in the list.</td>
       <td>
         <code>
-
+            my_list = [1, 2, 3]
+            my_list.insert(1, 4)
+            print(my_list) # Output: [1, 4, 2, 3]        
         </code>
       </td>
     </tr>
@@ -229,7 +256,9 @@
       <td>Removes the first occurrence of a specified item from the list.</td>
       <td>
         <code>
-
+            my_list = [1, 2, 3, 4]
+            my_list.remove(3)
+            print(my_list) # Output: [1, 2, 4]
         </code>
       </td>
     </tr>
@@ -238,7 +267,10 @@
       <td>Removes and returns the item at a specified index in the list.</td>
       <td>
         <code>
-
+            my_list = [1, 2, 3]
+            item = my_list.pop(1)
+            print(my_list) # Output: [1, 3]
+            print(item) # Output: 2            
         </code>
       </td>
     </tr>
@@ -247,7 +279,9 @@
       <td>Returns the index of the first occurrence of a specified item in the list.</td>
       <td>
         <code>
-
+            my_list = [1, 2, 3, 2]
+            index = my_list.index(2)
+            print(index) # Output: 1            
         </code>
       </td>
     </tr>
@@ -256,7 +290,9 @@
       <td>Returns the number of times a specified item appears in the list.</td>
       <td>
         <code>
-
+            my_list = [1, 2, 3, 2]
+            count = my_list.count(2)
+            print(count) # Output: 2            
         </code>
       </td>
     </tr>
@@ -265,7 +301,9 @@
       <td>Sorts the list in ascending order.</td>
       <td>
         <code>
-
+        my_list = [5, 2, 3, 1, 4]
+        my_list.sort()
+        print(my_list) # Output: [1, 2, 3, 4, 5]
         </code>
       </td>
     </tr>
@@ -274,7 +312,8 @@
       <td>Removes all items from the list.</td>
       <td>
         <code>
-
+            my_list = [1, 2, 3, 4, 5]
+            my_list.clear()  #Output: []
         </code>
       </td>
     </tr>
