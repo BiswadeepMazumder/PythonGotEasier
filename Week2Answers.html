@@ -282,147 +282,136 @@
 
 
 <h2>Question 1:</h2>
-<p>Write a program that prints out the first 10 numbers of the Fibonacci sequence using a for loop.</p>
+<p>Write a function that takes in a list of integers and returns a new list containing only the even numbers.</p>
 <h3>Answer:</h3>
 <pre><code>
-    a = 0
-    b = 1
-    for i in range(10):
-        print(a)
-        c = a + b
-        a = b
-        b = c
-    
+    def even_numbers(input_list):
+        return [num for num in input_list if num % 2 == 0]
+
+    print(even_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9])) 
 </code></pre>
 
 
 <h2>Question 2:</h2>
-<p>Write a program that takes a user's input and prints out all the numbers between 1 and the user's input that are divisible by 3 using a for loop</p>
+<p>Write a function that takes in two lists and returns a new list containing only the elements that appear in both lists.</p>
 <h3>Answer:</h3>
 <pre><code>
-    n = int(input("Enter a number: "))
-    for i in range(1, n+1):
-        if i % 3 == 0:
-            print(i)
-    
+    def common_elements(list1, list2):
+        return list(set(list1) & set(list2))
+
+    print(common_elements([1, 2, 3, 4, 5], [4, 5, 6, 7, 8]))
 </code></pre>
 
 
 <h2>Question 3:</h2>
-<p>Write a program that takes a user's input and calculates the factorial of that number using a while loop.</p>
+<p>Write a function that takes in a list of tuples, where each tuple contains a name and an age, and returns a new list containing only the names of people who are over the age of 18.</p>
 <h3>Answer:</h3>
 <pre><code>
-    n = int(input("Enter a number: "))
-    fact = 1
-    while n > 0:
-        fact *= n
-        n -= 1
-    print("Factorial =", fact)
-    
+    def names_over_18(input_list):
+        return [item[0] for item in input_list if item[1] > 18]
+        
+    print(names_over_18([('Alice', 25), ('Bob', 16), ('Charlie', 21)]))
 </code></pre>
 
 
 <h2>Question 4:</h2>
-<p>Write a program that generates a random number and asks the user to guess the number. The program should keep asking until the user guesses the correct number using a while loop.</p>
+<p>Write a function that takes in a list of integers and returns a new list where each element is the sum of the corresponding element in the original list and the previous element..</p>
 <h3>Answer:</h3>
 <pre><code>
-    import random
+    def cumulative_sum(input_list):
+        return [sum(input_list[:i+1]) for i in range(len(input_list))]
 
-    number = random.randint(1, 10)
-    guess = 0
-    
-    while guess != number:
-        guess = int(input("Guess a number between 1 and 10: "))
-        if guess < number:
-            print("Too low!")
-        elif guess > number:
-            print("Too high!")
-        else:
-            print("You guessed it!")
-    
+    print(cumulative_sum([1, 2, 3, 4, 5]))  
 </code></pre>
 
 <h2>Question 5:</h2>
-<p>Write a program that takes a user's input and prints out the multiplication table of that number using a for loop.</p>
+<p>Write a function that takes in a dictionary where the keys are strings and the values are lists of integers, and returns a new dictionary where each key is a string and the corresponding value is the sum of the integers in the original list.</p>
 <h3>Answer:</h3>
 <pre><code>
-    n = int(input("Enter a number: "))
-    for i in range(1, 11):
-        print(n, "x", i, "=", n*i)
-    
+    def second_largest(input_list):
+    sorted_list = sorted(set(input_list))
+    if len(sorted_list) < 2:
+        return None
+    return sorted_list[-2]
+
+    print(second_largest([1, 3, 5, 2, 4]))
 </code></pre>
 
 <h2>Question 6:</h2>
 <p>Write a program that takes a user's input and prints out the sum of all the even numbers between 1 and the user's input using a for loop.</p>
 <h3>Answer:</h3>
 <pre><code>
-    n = int(input("Enter a number: "))
-    sum = 0
-    for i in range(2, n+1, 2):
-        sum += i
-    print("Sum of even numbers =", sum)
-    
+    def dict_sum_values(input_dict):
+        return {key: sum(value) for key, value in input_dict.items()}
+
+    print(dict_sum_values({'a': [1, 2, 3], 'b': [4, 5, 6]}))  
 </code></pre>
 
 <h2>Question 7:</h2>
-<p>Write a program that takes a user's input and prints out the reverse of the input using a while loop.</p>
+<p>Write a function that takes in a list of strings and returns a new list where each string is reversed.</p>
 <h3>Answer:</h3>
 <pre><code>
-    n = input("Enter a number: ")
-    rev = ""
-    i = len(n) - 1
-    while i >= 0:
-        rev += n[i]
-        i -= 1
-    print("Reverse =", rev)
-    
+    def reverse_strings(input_list):
+        return [string[::-1] for string in input_list]
+
+    print(reverse_strings(['hello', 'world', 'python']))
 </code></pre>
 
 <h2>Question 8:</h2>
-<p>Write a program that prints out all the prime numbers between 1 and 100 using a for loop.</p>
+<p>Write a function that takes in a list of tuples, where each tuple contains a name and a birth year, and returns a new list containing only the names of people who were born before 2000.</p>
 <h3>Answer:</h3>
 <pre><code>
-    for i in range(2, 101):
-    is_prime = True
-    for j in range(2, i):
-        if i % j == 0:
-            is_prime = False
-            break
-    if is_prime:
-        print(i)
+    def filter_by_age(data):
+    result = []
+    for name, age in data:
+        if age > 18:
+            result.append(name)
+    return result
 
+    # example usage
+    people = [("Alice", 22), ("Bob", 17), ("Charlie", 19), ("David", 26)]
+    filtered_names = filter_by_age(people)
+    print(filtered_names) # prints ["Alice", "Charlie", "David"]
 </code></pre>
 
 <h2>Question 9:</h2>
-<p>Write a program that takes a user's input and prints out all the divisors of that number using a for loop.</p>
+<p>Write a function that takes in a list of tuples, where each tuple contains a name and a score, and returns a new list containing the names of the top three scorers.</p>
 <h3>Answer:</h3>
 <pre><code>
-    n = int(input("Enter a number: "))
-    for i in range(1, n+1):
-        if n % i == 0:
-            print(i)
+    def top_three_scorers(players):
+        # Sort the list of tuples in descending order based on the score
+        sorted_players = sorted(players, key=lambda x: x[1], reverse=True)
+        # Get the names of the top three scorers
+        top_three = [player[0] for player in sorted_players[:3]]
+        return top_three
+
+    players = [("Alice", 85), ("Bob", 92), ("Charlie", 79), ("David", 95), ("Eve", 88)]
+    top_three = top_three_scorers(players)
+    print(top_three)
 
 
 </code></pre>
 
-<h2>Question 10:</h2>
-<p>Write a program that takes a user's input and checks if it is a palindrome using a while loop.</p>
+<h2>Write a function that takes in a dictionary where the keys are strings and the values are lists of integers, and returns a new dictionary where each key is a string and the corresponding value is the product of the integers in the original list..</h2>
 <h3>Answer:</h3>
 <pre><code>
-    n = input("Enter a word: ")
-    i = 0
-    j = len(n) - 1
-    is_palindrome = True
-    while i < j:
-        if n[i] != n[j]:
-            is_palindrome = False
-            break
-        i += 1
-        j -= 1
-    if is_palindrome:
-        print(n, "is a palindrome")
-    else:
-        print(n, "is not a palindrome")
+    def product_of_integers(dictionary):
+        # Create a new dictionary to store the products
+        product_dict = {}
+        # Iterate over the original dictionary
+        for key, value in dictionary.items():
+            # Calculate the product of the integers in the list
+            product = 1
+            for num in value:
+                product *= num
+                # Add the product to the new dictionary
+                product_dict[key] = product
+        return product_dict
+
+    original_dict = {"list1": [2, 4, 6], "list2": [1, 3, 5], "list3": [2, 3, 4]}
+    product_dict = product_of_integers(original_dict)
+    print(product_dict)
+        
     
 </code></pre>
 
